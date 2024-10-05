@@ -268,6 +268,10 @@ $routes->get('landing', 'Home::landing');
 $routes->get('/sample-page', 'Home::sample_page');
 
 
+//DbTest
+$routes->get('db-test', 'DbTest::index');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
