@@ -54,16 +54,6 @@
     <?= $this->include('partials/footer-js') ?>
 
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Ha van hibaüzenet a session-ben
-        <?php if (session()->getFlashdata('error')) : ?>
-          notifier.show('Hiba!', '<?= session()->getFlashdata('error') ?>','danger','<?= base_url("assets/images/notification/high_priority-48.png")?>', 5000);
-        <?php endif; ?>
-        <?php if (session()->getFlashdata('info')) : ?>
-          notifier.show('Infó!', '<?= session()->getFlashdata('info') ?>','info','<?= base_url("assets/images/notification/medium_priority-48.png")?>', 5000);
-        <?php endif; ?>
-      });
-    </script>
+    
   </body>
 </html>

@@ -5,7 +5,8 @@
       <a href="dashboard-default" class="b-brand">
         <!-- ========   Change your logo from here   ============ -->
         <img src="<?= base_url('assets/images/vacilog.png') ?>" alt="" class="logo logo-lg" >
-        <img src="<?= base_url('assets/images/favicon.svg') ?>" alt="" class="logo logo-sm" >
+        <img src="<?= base_url('assets/images/vacilogo.png') ?>" alt="" class="logo logo-sm" >
+
       </a>
     </div>
     <div class="tab-container">

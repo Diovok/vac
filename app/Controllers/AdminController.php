@@ -16,7 +16,7 @@ class AdminController extends Controller
         $data = [
             'users' => $userModel->findAll(),
             'head_title' => 'Felhasználók',
-            'breadcrumb_item' => 'Felhasználók',
+            'breadcrumb_item' => 'Admin részleg',
         ];
         // A nézet megjelenítése a felhasználók adatával
         return view('auth/users', $data);
@@ -50,6 +50,9 @@ class AdminController extends Controller
                     'status'   => 'fuggo', // Alapértelmezett státusz
                 ]);
 
+                log_to_db('info', 'Új felhasználó létrehozva: ' . $this->request->getPost('username'), session()->get('user_id'));
+
+
                 return redirect()->to('/admin/users')->with('success', 'Felhasználó sikeresen létrehozva!');
             } else {
                 // Hibakezelés
@@ -67,7 +70,7 @@ class AdminController extends Controller
 
 
         // Naplózás az adatbázisba
-        log_to_database('info', 'Felhasználó ID ' . $id . ' aktiválva lett.', session()->get('user_id'));
+        log_to_db('info', 'Felhasználó ID ' . $id . ' aktiválva lett.', session()->get('user_id'));
 
 
         // Visszairányítás és üzenet
@@ -80,13 +83,14 @@ class AdminController extends Controller
         
 
         $userModel = new UserModel();
+        
 
         // A felhasználó státuszának inaktiválása
         $userModel->update($id, ['status' => 'inactive']);
         
         
         // Naplózás az adatbázisba
-        log_to_db('info', 'Felhasználó sikeresen bejelentkezett', 123);
+        log_to_db('info', 'Felhasználó ID ' . $id . ' deaktiválva lett.', session()->get('user_id'));
 
 
         // Visszairányítás és üzenet

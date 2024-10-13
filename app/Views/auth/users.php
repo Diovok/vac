@@ -21,6 +21,9 @@
       <div class="pc-content">
         <?= $this->include('partials/breadcrumb') ?>
 
+        
+
+
         <!-- [Fő tartalom] kezdete -->
         <div class="row">
           <div class="col-lg-12">
@@ -128,6 +131,10 @@
     <?= $this->include('partials/footer-block') ?>
     <?= $this->include('partials/customizer.php') ?>
     <?= $this->include('partials/footer-js') ?>
+
+        
+
+
     
     <!-- [Oldalspecifikus JS] kezdete -->
     <script type="module">

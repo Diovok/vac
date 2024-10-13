@@ -45,7 +45,7 @@ $routes->get('db-test', 'DbTest::index');
 $routes->get('login', 'Auth::login');    // GET kérés az oldal megjelenítésére
 $routes->post('login', 'Auth::login');   // POST kérés a bejelentkezési adatok feldolgozására
 $routes->get('logout', 'Auth::logout');  // Kilépés esetén a session törlése
-
+$routes->post('change_password', 'Auth::changePassword'); //Jelszó változtatás
 
 
 //Admin részleg

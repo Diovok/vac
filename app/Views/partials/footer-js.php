@@ -15,6 +15,19 @@
   </a>
 </div>
 <?php if(DARK_LAYOUT == 'default'){?>
+
+    <!-- Ha fuggo -->
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    <?php if (session()->get('forcePasswordChange')) : ?>
+      var myModal = new bootstrap.Modal(document.getElementById('changePasswordModal'), {});
+      myModal.show();
+    <?php endif; ?>
+  });
+</script>
+
 <script>
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         dark_layout = 'true';

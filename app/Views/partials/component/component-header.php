@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar-light default">
   <div class="container">
     <a class="navbar-brand" href="dashboard-default">
-      <img src="<?= base_url('assets/images/logo-dark.svg') ?>" alt="logo" >
+      <img src="<?= base_url('assets/images/vacilogo.png') ?>" alt="logo" >
       <span class="badge bg-light-success rounded-pill ms-2 theme-version"><?= VERSION ?></span>
     </a>
     <button
