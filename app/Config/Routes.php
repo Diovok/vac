@@ -37,6 +37,26 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+//Tesztek
+$routes->get('test', 'TestController::index');
+$routes->get('db-test', 'DbTest::index');
+
+//Login
+$routes->get('login', 'Auth::login');    // GET kérés az oldal megjelenítésére
+$routes->post('login', 'Auth::login');   // POST kérés a bejelentkezési adatok feldolgozására
+$routes->get('logout', 'Auth::logout');  // Kilépés esetén a session törlése
+
+
+
+//Admin részleg
+$routes->get('admin/users', 'AdminController::users'); // Felhasználók megjelenítése
+$routes->post('admin/add_user', 'AdminController::addUser'); // Új felhasználó hozzáadása
+$routes->get('admin/user/activate/(:num)', 'AdminController::activateUser/$1');
+$routes->get('admin/user/deactivate/(:num)', 'AdminController::deactivateUser/$1');
+
+
+
+
 // Dashboard
 $routes->get('/dashboard-default', 'Home::dashboard_default');
 $routes->get('/dashboard-analytics', 'Home::dashboard_analytics');
@@ -266,10 +286,6 @@ $routes->get('landing', 'Home::landing');
 
 //Other
 $routes->get('/sample-page', 'Home::sample_page');
-
-
-//DbTest
-$routes->get('db-test', 'DbTest::index');
 
 
 /*

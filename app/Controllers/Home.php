@@ -10,7 +10,7 @@ class Home extends BaseController {
             'head_title' => 'Landing',
             'breadcrumb_item' => 'Dashboard',
         ];
-        return view( 'pages/landing', $data );
+        return view( 'dashboard/index', $data );
     }
 
     // Dashboard

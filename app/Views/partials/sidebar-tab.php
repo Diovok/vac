@@ -4,7 +4,7 @@
     <div class="m-header">
       <a href="dashboard-default" class="b-brand">
         <!-- ========   Change your logo from here   ============ -->
-        <img src="<?= base_url('assets/images/logo-dark.svg') ?>" alt="" class="logo logo-lg" >
+        <img src="<?= base_url('assets/images/vacilog.png') ?>" alt="" class="logo logo-lg" >
         <img src="<?= base_url('assets/images/favicon.svg') ?>" alt="" class="logo logo-sm" >
       </a>
     </div>

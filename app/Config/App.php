@@ -20,29 +20,18 @@ class App extends BaseConfig
     
     public function __construct()
     {
-        /**
-         * To trace current URL
-         */
-        ?>
-        
-        <!-- <script>console.log('URL: <?php echo $_SERVER["REQUEST_URI"] ?>')</script> -->
-        <?php
-
-        if (strpos($_SERVER['REQUEST_URI'], "/codeigniter/stage/default") === 0) {
-            $this->baseURL  = "https://ableproadmin.com/codeigniter/stage/default/public";
-        }
-        else if (strpos($_SERVER['REQUEST_URI'], "/codeigniter/default/") === 0) {
-            $this->baseURL = "https://ableproadmin.com/codeigniter/default/public";
-        }
-        else if (strpos($_SERVER['REQUEST_URI'], "/") === 0) {
-            $this->baseURL = "http://localhost:8080/";
-        }
-        else {
-            $this->baseURL  = "https://ableproadmin.com/codeigniter/stage/default/public";
-        };
+       
+        $this->baseURL = "http://localhost:8080/";
     }
 
-
+    public $sessionDriver            = 'CodeIgniter\Session\Handlers\FileHandler';
+    public $sessionCookieName        = 'ci_session';
+    public $sessionExpiration        = 7200;
+    public $sessionSavePath          = WRITEPATH . 'session';  // writable/session mappa
+    public $sessionMatchIP           = false;
+    public $sessionTimeToUpdate      = 300;
+    public $sessionRegenerateDestroy = false;
+    
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.
@@ -66,7 +55,7 @@ class App extends BaseConfig
      * something else. If you are using mod_rewrite to remove the page set this
      * variable so that it is blank.
      */
-    public string $indexPage = 'index.php';
+    public string $indexPage = '';
 
     /**
      * --------------------------------------------------------------------------
@@ -134,7 +123,7 @@ class App extends BaseConfig
      *
      * @see https://www.php.net/manual/en/timezones.php for list of timezones supported by PHP.
      */
-    public string $appTimezone = 'UTC';
+    public string $appTimezone = 'Europe/Budapest';
 
     /**
      * --------------------------------------------------------------------------

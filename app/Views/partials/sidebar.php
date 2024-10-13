@@ -2,9 +2,9 @@
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
     <div class="m-header">
-      <a href="dashboard-default" class="b-brand text-primary">
+      <a href="<?php base_url("/")?>" class="b-brand text-primary">
         <!-- ========   Change your logo from here   ============ -->
-        <img src="<?= base_url('assets/images/logo-dark.svg') ?>"alt="logo"  class="img-fluid logo-lg">
+        <img src="<?= base_url('assets/images/vacilogo.png') ?>"alt="logo"  class="img-fluid logo-lg">
         <span class="badge bg-light-success rounded-pill ms-2 theme-version"><?= VERSION ?></span>
       </a>
     </div>

@@ -5,6 +5,9 @@
 <script src="<?= base_url('assets/js/fonts/custom-font.js') ?>"></script>
 <script src="<?= base_url('assets/js/pcoded.js') ?>"></script>
 <script src="<?= base_url('assets/js/plugins/feather.min.js') ?>"></script>
+<!-- notification Js -->
+<script src="<?= base_url('assets/js/plugins/notifier.js') ?>"></script>
+<script src="<?= base_url('assets/js/pages/ac-notification.js') ?>"></script>
 <div class="floting-button">
   <a href="https://1.envato.market/zNkqj6" class="btn btn btn-danger buynowlinks d-inline-flex align-items-center gap-2" data-bs-toggle="tooltip" title="Buy Now">
     <i class="ph-duotone ph-shopping-cart"></i>

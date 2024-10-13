@@ -1,4 +1,22 @@
 <li class="pc-item pc-caption">
+  <label>Admin részleg</label>
+</li>
+<li class="pc-item">
+  <a href="<?= base_url("admin/users")?>" class="pc-link">
+    <span class="pc-micon">
+      <svg class="pc-icon">
+        <use xlink:href="#custom-story"></use>
+      </svg>
+    </span>
+    <span class="pc-mtext">Felhasználók</span>
+  </a>
+</li>
+
+
+
+
+
+<li class="pc-item pc-caption">
   <label>Navigation</label>
 </li>
 <li class="pc-item pc-hasmenu">

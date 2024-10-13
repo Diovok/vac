@@ -12,4 +12,6 @@
 <link rel="stylesheet" href="<?= base_url('assets/fonts/material.css') ?>" >
 <!-- [Template CSS Files] -->
 <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>" id="main-style-link" >
-<link rel="stylesheet" href="<?= base_url('assets/css/style-preset.css') ?>">
+<link rel="stylesheet" href="<?= base_url('assets/css/style-preset.css') ?>">    
+<!-- Notifier CSS -->
+<link rel="stylesheet" href="<?= base_url('assets/css/plugins/notifier.css') ?>">

@@ -2,9 +2,9 @@
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
     <div class="m-header">
-      <a href="dashboard-default" class="b-brand">
+      <a href="<?php base_url("")?>" class="b-brand">
         <!-- ========   Change your logo from here   ============ -->
-        <img src="<?= base_url('assets/images/logo-dark.svg') ?>" alt="" class="logo logo-lg" >
+        <img src="<?= base_url('assets/images/vacilogo.png') ?>" alt="" class="logo logo-lg" >
         <img src="<?= base_url('assets/images/favicon.svg') ?>" alt="" class="logo logo-sm" >
       </a>
     </div>

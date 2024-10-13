@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
   <!-- [Head] start -->
   <head>
     
@@ -19,45 +19,30 @@
             <div class="card-body">
               <div class="text-center">
                 <a href="#"><img src="<?= base_url('assets/images/logo-dark.svg') ?>" alt="img"></a>
-                <div class="d-grid my-3">
-                  <button type="button" class="btn mt-2 btn-light-primary bg-light text-muted">
-                    <img src="<?= base_url('assets/images/authentication/facebook.svg') ?>" alt="img"> <span>
-                      Sign In with Facebook</span>
-                  </button>
-                  <button type="button" class="btn mt-2 btn-light-primary bg-light text-muted">
-                    <img src="<?= base_url('assets/images/authentication/twitter.svg') ?>" alt="img"> <span> Sign
-                      In with Twitter</span>
-                  </button>
-                  <button type="button" class="btn mt-2 btn-light-primary bg-light text-muted">
-                    <img src="<?= base_url('assets/images/authentication/google.svg') ?>" alt="img"> <span> Sign
-                      In with Google</span>
-                  </button>
+
+              <div class="saprator my-3"></div>
+              <h4 class="text-center f-w-500 mb-3">Bejelentkezés</h4>
+
+              <!-- Itt kezdődik az űrlap -->
+              <form method="post" action="<?= base_url('/login') ?>">  <!-- Form létrehozása, POST metódussal -->
+                <div class="mb-3">
+                  <input type="text" class="form-control" name="username" id="usernameInput" placeholder="Felhasználónév" required>
                 </div>
-              </div>
-              <div class="saprator my-3">
-                <span>OR</span>
-              </div>
-              <h4 class="text-center f-w-500 mb-3">Login with your email</h4>
-              <div class="mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="Email Address">
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control" id="floatingInput1" placeholder="Password">
-              </div>
-              <div class="d-flex mt-1 justify-content-between align-items-center">
-                <div class="form-check">
-                  <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="">
-                  <label class="form-check-label text-muted" for="customCheckc1">Remember me?</label>
+                <div class="mb-3">
+                  <input type="password" class="form-control" name="password" id="passwordInput" placeholder="Jelszó" required>
                 </div>
-                <h6 class="text-secondary f-w-400 mb-0">Forgot Password?</h6>
-              </div>
-              <div class="d-grid mt-4">
-                <button type="button" class="btn btn-primary">Login</button>
-              </div>
-              <div class="d-flex justify-content-between align-items-end mt-4">
-                <h6 class="f-w-500 mb-0">Don't have an Account?</h6>
-                <a href="register-v1" class="link-primary">Create Account</a>
-              </div>
+                <div class="d-flex mt-1 justify-content-between align-items-center">
+                  <div class="form-check">
+                    <input class="form-check-input input-primary" type="checkbox" id="remembermeCheck" checked="">
+                    <label class="form-check-label text-muted" for="customCheckc1">Emlékezzen rám</label>
+                  </div>
+                </div>
+                <div class="d-grid mt-4">
+                  <button type="submit" class="btn btn-primary">Bejelentkezés</button> <!-- type="submit" a form elküldéséhez -->
+                </div>
+              </form>
+              <!-- Itt ér véget az űrlap -->
+
             </div>
           </div>
         </div>
